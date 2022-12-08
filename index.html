@@ -38,13 +38,52 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos odit soluta quos! Obcaecati quia quidem quisquam in, inventore quam et sed, culpa accusamus adipisci autem deserunt illo explicabo laborum!</p>
 
                     <div class="tab-tiles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Software Development</span><br>Develop Softwares</li>
+                            <li><span>Software Development</span><br>Develop Softwares</li>
+                            <li><span>Software Development</span><br>Develop Softwares</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Software Engineer</li>
+                            <li><span>2022 - Current</span><br>Software Engineer</li>
+                            <li><span>2022 - Current</span><br>Software Engineer</li> 
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br>B.Tech in Computer Science and Engineering</li>
+                            <li><span>2022</span><br>B.Tech in Computer Science and Engineering</li>
+                            <li><span>2022</span><br>B.Tech in Computer Science and Engineering</li> 
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
 </body>
 </html>
