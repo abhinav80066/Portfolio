@@ -234,3 +234,18 @@ nav ul li a:hover::after{
     color: #ff004f;
     transform:translateY(-5px);
 }
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff004f;
+}
